@@ -17,8 +17,8 @@ public class GlobalEventDispatcher extends EventDispatcher implements IGlobalEve
 
     public override function dispatchEvent(event:Event):Boolean {
         for (var l:* in _globalListeners) {
-            if (l is Function) {
-                var listener:Function = l as Function;
+            var listener:Function = l as Function;
+            if (listener !== null) {
                 listener(event);
             }
         }
