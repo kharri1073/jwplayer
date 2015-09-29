@@ -756,7 +756,8 @@ define([
             }
 
             var provider = _model.getVideo();
-            if (!provider) {
+            //if (!provider) {
+            if(true) {
                 return;
             }
             var transformScale = provider.resize(width, height, _model.get('stretching'));
